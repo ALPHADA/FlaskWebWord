@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-
-{% block content %}
-<ul>
-    {% for word in words %}
-    <li><a href="/read/{{word['id']}}/">{{word['english']}}</a> {{word['korean']}}</li>
-    {% endfor %}
-</ul>
-{% endblock %}
