@@ -1,19 +1,9 @@
-<html><head></head>
-    <body cz-shortcut-listen="true">
-        <h1><a href="/">단어장</a></h1>
-        <ol>
-            <li><a href="/random/">random</a></li>
-            <li><a href="/reads/">list</a></li>
-            <li><a href="/create/">create</a></li>
-        </ol>
-        <ul>
-            {% for word in words %}
-            <li><a href="/read/{{word['id']}}/">{{word['english']}}</a> {{word['korean']}}</li>
-            {% endfor %}
-        </ul>
-        <!-- 
-        <li><a href="/read/1">whale</a> 고래</li>
-        <li><a href="/read/1">whale</a> 고래</li>
-        <li><a href="/read/1">whale</a> 고래</li>
-        <li><a href="/read/1">whale</a> 고래</li> -->
-    </body></html>
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+    {% for word in words %}
+    <li><a href="/read/{{word['id']}}/">{{word['english']}}</a> {{word['korean']}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

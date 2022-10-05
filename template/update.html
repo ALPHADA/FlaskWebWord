@@ -1,15 +1,9 @@
-<html><head></head>
-    <body cz-shortcut-listen="true">
-        <h1><a href="/">단어장</a></h1>
-        <ol>
-            <li><a href="/random/">random</a></li>
-            <li><a href="/reads/">list</a></li>
-            <li><a href="/create/">create</a></li>
-        </ol>
-        <form action="/update/{{id}}/" method="POST">
-            <p><input type="text" name="english" placeholder="영어단어" value="{{english}}"></p>
-            <p><textarea name="korean" placeholder="뜻">{{korean}}</textarea></p>
-            <p><input type="submit" value="update"></p>
-        </form>
-        
-    </body></html>
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/update/{{id}}/" method="POST">
+    <p><input type="text" name="english" placeholder="영어단어" value="{{english}}"></p>
+    <p><textarea name="korean" placeholder="뜻">{{korean}}</textarea></p>
+    <p><input type="submit" value="update"></p>
+</form>
+{% endblock %}
