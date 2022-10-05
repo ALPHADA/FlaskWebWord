@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/create/" method="POST">
+    <p><input type="text" name="english" placeholder="영어단어"></p>
+    <p><textarea name="korean" placeholder="뜻"></textarea></p>
+    <p><input type="submit" value="create"></p>
+</form>
+{% endblock %}
